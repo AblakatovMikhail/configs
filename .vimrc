@@ -18,6 +18,9 @@ Plug 'https://github.com/vim-airline/vim-airline.git'
 " Git gutter - shows git diff
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 
+" fugitive - vim git wrapper
+Plug 'https://github.com/tpope/vim-fugitive.git'
+
 " YouCompleteMe - vim autocompletion
 Plug 'https://github.com/ycm-core/YouCompleteMe.git'
 
@@ -33,7 +36,7 @@ set cscopetag
 "set cscopeverbose
 
 if has('quickfix')
-  set cscopequickfix=s-,d-,i-,t-,e-
+  set cscopequickfix=s-,d-,i-,t-
 endif
 
 cnoreabbrev csa cs add
