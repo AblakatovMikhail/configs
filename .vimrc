@@ -68,3 +68,8 @@ syntax on
 set encoding=utf-8
 set number
 set updatetime=100
+
+nmap <silent> <S-Up> :wincmd k<CR>
+nmap <silent> <S-Down> :wincmd j<CR>
+nmap <silent> <S-Left> :wincmd h<CR>
+nmap <silent> <S-Right> :wincmd l<CR>
