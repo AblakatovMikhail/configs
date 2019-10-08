@@ -35,7 +35,7 @@ highlight GitGutterDelete guifg=#ff2222 guibg=#000000 ctermfg=1 ctermbg=0
 call plug#end()
 
 "CScope
-set cscopetag
+"set cscopetag
 "set cscopeverbose
 
 if has('quickfix')
