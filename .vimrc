@@ -18,6 +18,9 @@ Plug 'https://github.com/vim-airline/vim-airline.git'
 " Git gutter - shows git diff
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 
+" Vimagit
+Plug 'https://github.com/jreybert/vimagit.git'
+
 " fugitive - vim git wrapper
 Plug 'https://github.com/tpope/vim-fugitive.git'
 
