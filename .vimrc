@@ -49,7 +49,7 @@ cnoreabbrev csr cs reset
 cnoreabbrev css cs show
 cnoreabbrev csh cs help
 
-if (@% == "") || (match(expand('%:p'), getenv('PWD')) == 0)
+if (@% == "") || (match(expand('%:p'), $PWD) == 0)
 	if filereadable("cscope.out")
 		exe "cs add" 'cscope.out'
 	endif
