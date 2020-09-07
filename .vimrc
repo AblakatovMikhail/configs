@@ -25,7 +25,7 @@ Plug 'https://github.com/jreybert/vimagit.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 
 " YouCompleteMe - vim autocompletion
-Plug 'https://github.com/ycm-core/YouCompleteMe.git'
+"Plug 'https://github.com/ycm-core/YouCompleteMe.git'
 
 highlight GitGutterAdd    guifg=#009900 guibg=#000000 ctermfg=2 ctermbg=0
 highlight GitGutterChange guifg=#bbbb00 guibg=#000000 ctermfg=3 ctermbg=0
