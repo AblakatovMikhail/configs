@@ -57,7 +57,7 @@ nmap <Leader>m <Plug>ToggleMarkbar
 " search for multiple files with gf and select from location-list
 Plug 'numEricL/vim-gf-list'
 
-Plug 'neoclide/coc.nvim', {
+Plug 'AblakatovMikhail/coc.nvim', {
   \'for':[
     \'zig','cmake','rust','java','json','haskell','ts','sh','cs','yaml','c',
     \'cpp','d','python','dart','javascript','vim','tex'],
