@@ -60,7 +60,7 @@ Plug 'numEricL/vim-gf-list'
 Plug 'neoclide/coc.nvim', {
   \'for':[
     \'zig','cmake','rust','java','json','haskell','ts','sh','cs','yaml','c',
-    \'cpp','d','python','dart','javascript','vim'],
+    \'cpp','d','python','dart','javascript','vim','tex'],
   \'branch': 'release'}
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
@@ -92,6 +92,13 @@ func MapCocMaps()
 endfunc
 
 autocmd FileType cpp call MapCocMaps()
+
+" VimTeX is a modern Vim and Neovim filetype and syntax plugin for LaTeX files.
+Plug 'lervag/vimtex', {
+	\'do': ':CocInstall coc-vimtex'}
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_fold_enabled = '1'
 
 " Initialize plugin system
 call plug#end()
