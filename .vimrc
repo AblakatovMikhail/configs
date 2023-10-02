@@ -100,6 +100,10 @@ let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_method = 'latexmk'
 let g:vimtex_fold_enabled = '1'
 
+Plug 'AblakatovMikhail/vim-snippets', {
+	\'branch': 'fork',
+	\'do': ':CocInstall coc-snippets'}
+
 " Initialize plugin system
 call plug#end()
 
