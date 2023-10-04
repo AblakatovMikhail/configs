@@ -93,16 +93,34 @@ endfunc
 
 autocmd FileType cpp call MapCocMaps()
 
+function InstallCocVimtex(info)
+  if a:info.status == 'installed' || a:info.force
+    let l:temptexfile=system('mktemp --suffix=.tex')
+    execute(':tabnew '.expand(l:temptexfile))
+    CocInstall coc-vimtex
+    execute(':tabc')
+  endif
+endfunction
+
 " VimTeX is a modern Vim and Neovim filetype and syntax plugin for LaTeX files.
 Plug 'lervag/vimtex', {
-	\'do': ':CocInstall coc-vimtex'}
+	\'do': function('InstallCocVimtex')}
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_method = 'latexmk'
 let g:vimtex_fold_enabled = '1'
 
+function InstallCocSnippets(info)
+  if a:info.status == 'installed' || a:info.force
+    let l:temptexfile=system('mktemp --suffix=.tex')
+    execute(':tabnew '.expand(l:temptexfile))
+    CocInstall coc-snippets
+    execute(':tabc')
+  endif
+endfunction
+
 Plug 'AblakatovMikhail/vim-snippets', {
 	\'branch': 'fork',
-	\'do': ':CocInstall coc-snippets'}
+	\'do': function('InstallCocSnippets')}
 
 " Initialize plugin system
 call plug#end()
