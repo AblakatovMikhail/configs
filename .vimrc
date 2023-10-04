@@ -103,7 +103,7 @@ function InstallCocVimtex(info)
 endfunction
 
 " VimTeX is a modern Vim and Neovim filetype and syntax plugin for LaTeX files.
-Plug 'lervag/vimtex', {
+Plug 'AblakatovMikhail/vimtex', {
 	\'do': function('InstallCocVimtex')}
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_method = 'latexmk'
