@@ -81,6 +81,7 @@ set signcolumn=yes
 func MapCocMaps()
   nmap <silent> [g <Plug>(coc-diagnostic-prev)
   nmap <silent> ]g <Plug>(coc-diagnostic-next)
+  nmap <silent> <Leader>qf <Plug>(coc-fix-current)
   nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> gD <Plug>(coc-declaration)
   nmap <silent> gy <Plug>(coc-type-definition)
@@ -91,7 +92,7 @@ func MapCocMaps()
   nmap <silent> gC :call CocAction('showOutgoingCallsCalls')<CR>
 endfunc
 
-autocmd FileType cpp call MapCocMaps()
+autocmd FileType cpp,java,sh call MapCocMaps()
 
 function InstallCocVimtex(info)
   if a:info.status == 'installed' || a:info.force
@@ -117,10 +118,12 @@ function InstallCocSnippets(info)
   endif
 endfunction
 
-Plug 'AblakatovMikhail/vim-snippets', {
-	\'branch': 'fork',
-	\'do': function('InstallCocSnippets')}
+"Plug 'AblakatovMikhail/vim-snippets', {
+"	\'branch': 'fork',
+"	\'do': function('InstallCocSnippets')}
 
+Plug 'vim-autoformat/vim-autoformat'
+Plug 'rhysd/vim-clang-format'
 " Initialize plugin system
 call plug#end()
 
@@ -155,11 +158,18 @@ endif
 
 colorscheme desertink
 syntax on
+set hlsearch
 set encoding=utf-8
 set number
 set updatetime=100
 
-nmap <silent> <S-Up> :wincmd k<CR>
-nmap <silent> <S-Down> :wincmd j<CR>
-nmap <silent> <S-Left> :wincmd h<CR>
-nmap <silent> <S-Right> :wincmd l<CR>
+"nmap <silent> <S-Up> :wincmd k<CR>
+"nmap <silent> <S-Down> :wincmd j<CR>
+"nmap <silent> <S-Left> :wincmd h<CR>
+"nmap <silent> <S-Right> :wincmd l<CR>
+
+" This is here because of the default Ubuntu terminal
+nnoremap [6;5~ :tabnext<CR>
+nnoremap [5;5~ :tabprev<CR>
+
+packadd termdebug
